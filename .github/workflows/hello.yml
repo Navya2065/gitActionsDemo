@@ -16,4 +16,4 @@ jobs:
 
     steps:
       - name: Print goodbye
-       run: echo "goodbye Navya"
+        run: echo "goodbye Navya"
