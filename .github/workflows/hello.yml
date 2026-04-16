@@ -12,8 +12,8 @@ jobs:
       - name: Print message
         run: echo "Hello Navya 👋"
   say-bye:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
-      -name: Print goodbye
+      - name: Print goodbye
        run: echo "goodbye Navya"
