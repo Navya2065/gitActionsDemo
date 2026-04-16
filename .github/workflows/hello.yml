@@ -3,6 +3,8 @@ name: My First Workflow
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   say-hello:
@@ -11,6 +13,7 @@ jobs:
     steps:
       - name: Print message
         run: echo "Hello Navya 👋"
+
   say-bye:
     runs-on: ubuntu-latest
 
