@@ -1,23 +1,26 @@
-name: My First Workflow
+name: Checkout Demo Workflow
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  job1:
+  demo-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print hello
-        run: echo "Hello Navya 👋"
+      # Step 1: Clone / checkout repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  job2:
-    needs: job1
-    runs-on: ubuntu-latest
+      # Step 2: Show files in repo
+      - name: List files
+        run: ls
 
-    steps:
-      - name: Print goodbye
-        run: echo "Goodbye Navya 👋"
+      # Step 3: Show all files including hidden
+      - name: List all files
+        run: ls -la
+
+      # Step 4: Show current folder path
+      - name: Print working directory
+        run: pwd
