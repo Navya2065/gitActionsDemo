@@ -9,13 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Clone / checkout repository code
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # - name: Checkout repository
+      #   uses: actions/checkout@v4
 
-      # Step 2: Show files in repo
       - name: List files
         run: ls
 
-      
-    
+      - name: Setup Node
+        uses: actions/setup-node@v4
