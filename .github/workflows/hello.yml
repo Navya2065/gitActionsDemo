@@ -2,7 +2,8 @@ name: Checkout Demo Workflow
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - "main"
 
 jobs:
   demo-job:
@@ -18,11 +19,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      - name: Print node version
-        run: node -v 
-      
-      - name: Install dependencies
+      - name: Print Node Version
+        run: node -v
+
+      - name: Install Dependencies
         run: npm i
 
-      - name: Starting test
+      - name: Starting Test
         run: npm run test
