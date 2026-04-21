@@ -17,3 +17,6 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v4
+
+      - name: Print node version
+        run: node -v 
